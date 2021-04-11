@@ -68,7 +68,7 @@ public class CardSchemeController {
         return util.returnSuccessResponse(request, "Card Creatded succesfully");
     }
 
-    @GetMapping(value = "/verify/{card_number}", produces = "Application/json", consumes = "Application/json")
+    @GetMapping(value = "/verify/{card_number}", produces = "Application/json")
     @ApiOperation(value = "Verifies card number",
             notes = "verifies card number",
             response = Response.class)
