@@ -15,6 +15,6 @@ response{
     }
 }
 
-app key:"APIKEY_17644261
-Authorization header:-appID+hash
+app key:"APIKEY_17644261"
+Authorization header:"appID+hash"
 timeStamp:********
