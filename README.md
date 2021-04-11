@@ -2,9 +2,10 @@
 
 swagger-documentation:https://card-details-service.herokuapp.com/swagger-ui.html#/
 
-To generate APIKEY :  https://card-details-service.herokuapp.com/User/generateAPIKey
+To generate APIKEY(HTTPOST) :  https://card-details-service.herokuapp.com/User/generateAPIKey
 
 request {"appID": "3line"}
+
 
 response{
     "success": "true",
@@ -15,6 +16,9 @@ response{
     }
 }
 
+
 app key:"APIKEY_17644261"
+
 Authorization header:"appID+hash"
+
 timeStamp:********
