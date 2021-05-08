@@ -74,7 +74,7 @@ public class CardSchemeController {
             response = Response.class)
     public ResponseEntity<?> cardScheme(@PathVariable("card_number") String card_number) throws IOException {
         int count=0;
-        CardScheme card = cardRepo.findByCardnum(card_number);
+        CardScheme card = cardService.findBycardNumber(card_number);
         if (card == null) {
            return util.returnErrorResponse("card number not found", HttpStatus.NOT_FOUND);
         }

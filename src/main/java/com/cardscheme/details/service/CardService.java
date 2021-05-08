@@ -10,6 +10,8 @@ import com.cardscheme.details.repository.CardSchemeRepository;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -21,6 +23,7 @@ import org.springframework.stereotype.Service;
  * @author austine.okoroafor
  */
 @Service
+@CacheConfig(cacheNames = {"CardScheme"})
 public class CardService {
     
     @Autowired
@@ -37,5 +40,12 @@ public class CardService {
             return new ArrayList<CardScheme>();
         }
     }
+     @Cacheable
+     public CardScheme findBycardNumber(String cardNum){
+       CardScheme card=cardRepo.findByCardnum(cardNum);
+       
+       return card;
+     
+     }
     
 }
